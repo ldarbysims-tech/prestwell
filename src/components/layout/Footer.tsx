@@ -144,6 +144,20 @@ export default function Footer() {
           <p className="text-xs text-white/35 font-body">
             © {new Date().getFullYear()} Prestwell Continuum. All rights reserved.
           </p>
+
+          {/* Legal links */}
+          <div className="flex items-center gap-5">
+            <Link href="/privacy-policy" className="text-xs text-white/40 hover:text-white/70 font-body transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-of-service" className="text-xs text-white/40 hover:text-white/70 font-body transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/hipaa-notice" className="text-xs text-white/40 hover:text-white/70 font-body transition-colors">
+              HIPAA Notice
+            </Link>
+          </div>
+
           <p className="text-xs text-white/30 font-body flex items-center gap-1.5">
             Built with <Heart size={10} className="text-sage-400" fill="currentColor" /> for families who deserve better care
           </p>
