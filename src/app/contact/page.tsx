@@ -55,22 +55,16 @@ export default function ContactPage() {
     setFormState('submitting');
 
     try {
-      /*
-       * TODO: Replace this with your actual form submission.
-       * Options:
-       *   - Next.js API route: POST /api/contact
-       *   - Formspree: https://formspree.io
-       *   - Resend: https://resend.com
-       *   - SendGrid
-       *
-       * Example with Formspree:
-       * await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-       *   method: 'POST',
-       *   headers: { 'Content-Type': 'application/json' },
-       *   body: JSON.stringify(formData),
-       * });
-       */
-      await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulated delay
+      const res = await fetch('/api/contact', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error('Non-2xx response from /api/contact');
+      }
+
       setFormState('success');
     } catch {
       setFormState('error');
