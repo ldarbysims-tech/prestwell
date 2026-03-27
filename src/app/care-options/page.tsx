@@ -7,7 +7,7 @@ import CTABanner from '@/components/ui/CTABanner';
 export const metadata: Metadata = {
   title: 'Care Options',
   description:
-    'Choose the level of private-duty nursing care that fits your family. Weekly visits, daily care, or twice-daily nursing — all fully customizable.',
+    'Choose the level of private-duty nursing care that fits your family. Weekly visits, twice-weekly visits, or daily care — all fully customizable.',
 };
 
 const careOptions = [
@@ -63,27 +63,27 @@ const careOptions = [
     accent: 'navy',
   },
   {
-    id: 'twice-daily',
+    id: 'twice-weekly',
     icon: RefreshCw,
-    frequency: 'Twice Daily Visits',
-    tagline: 'Maximum presence. Maximum safety.',
-    ideal: 'Ideal for medically complex patients who need clinical oversight both morning and evening — without the disruption and cost of inpatient care.',
+    frequency: 'Twice Weekly Visits',
+    tagline: 'Consistent. Balanced. Dependable.',
+    ideal: 'Ideal for patients who need more than a weekly check-in but don\'t yet require daily nursing — a structured middle ground that catches changes before they become problems.',
     description:
-      'Twice-daily nursing brings the highest level of home-based clinical support we offer. This option is reserved for patients whose condition requires structured morning and evening nursing interventions — allowing them to remain home in comfort while receiving near-inpatient clinical attention.',
+      'Twice-weekly nursing provides a reliable rhythm of clinical oversight for patients managing ongoing conditions or recovering gradually at home. Two visits per week means your nurse stays closely attuned to your loved one\'s progress, with enough frequency to catch early warning signs and adjust care accordingly.',
     includes: [
-      'Morning and evening clinical assessments',
-      'Complex medication management at each visit',
-      'Dual wound care sessions for faster healing',
-      'Monitoring throughout the day via communication plan',
-      'Detailed shift-style nursing notes',
-      'Proactive family communication twice daily',
-      'Care coordination and physician liaison as needed',
+      'Full nursing assessment at each visit',
+      'Vital sign monitoring and trend tracking',
+      'Medication review and administration as ordered',
+      'Wound care and dressing changes as needed',
+      'Family updates after each visit',
+      'Coordination with physicians between visits',
+      'Detailed nursing documentation each visit',
     ],
     bestFor: [
-      'Medically complex or high-acuity patients',
-      'Patients on multiple critical medications',
-      'Complex wounds requiring morning and evening attention',
-      'Families seeking an alternative to skilled nursing facilities',
+      'Patients stepping down from daily care',
+      'Chronic condition management requiring close follow-up',
+      'Post-discharge patients not yet fully stabilized',
+      'Families wanting frequent clinical touchpoints without daily visits',
     ],
     featured: false,
     accent: 'sage',

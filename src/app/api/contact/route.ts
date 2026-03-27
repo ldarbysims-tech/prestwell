@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { buildContactEmail } from '@/lib/emailTemplate';
+import { buildContactEmail, buildConfirmationEmail } from '@/lib/emailTemplate';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const TO_ADDRESS   = 'care@prestwellcontinuum.com';
+const TO_ADDRESS   = 'ldarby@prestwellsignaturehealth.com';
 const FROM_ADDRESS = 'Prestwell Website <noreply@prestwellcontinuum.com>';
 
 export async function POST(request: NextRequest) {
@@ -31,14 +31,25 @@ export async function POST(request: NextRequest) {
       name, email, phone, subject, message, careType,
     });
 
-    await resend.emails.send({
-      from:     FROM_ADDRESS,
-      to:       TO_ADDRESS,
-      replyTo:  email,
-      subject:  emailSubject,
-      html,
-      text,
-    });
+    const confirmation = buildConfirmationEmail({ name, email, phone, subject, message, careType });
+
+    await Promise.all([
+      resend.emails.send({
+        from:    FROM_ADDRESS,
+        to:      TO_ADDRESS,
+        replyTo: email,
+        subject: emailSubject,
+        html,
+        text,
+      }),
+      resend.emails.send({
+        from:    FROM_ADDRESS,
+        to:      email,
+        subject: confirmation.subject,
+        html:    confirmation.html,
+        text:    confirmation.text,
+      }),
+    ]);
 
     return NextResponse.json(
       { success: true, message: 'Your message has been received.' },

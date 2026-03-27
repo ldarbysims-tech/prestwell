@@ -22,8 +22,8 @@ interface FormData {
 
 const careTypes = [
   'Weekly Visits',
+  'Twice Weekly Visits',
   'Daily Visits',
-  'Twice Daily Visits',
   'Not sure yet — I need guidance',
   'Other',
 ];
