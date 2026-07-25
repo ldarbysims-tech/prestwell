@@ -9,6 +9,7 @@ import {
   whoWeServe,
   whyFamiliesChoose,
   servicesPreview,
+  testimonials,
 } from '@/content/siteContent';
 import type { Metadata } from 'next';
 
@@ -161,6 +162,37 @@ export default function HomePage() {
                   Learn More <ArrowRight size={16} />
                 </Link>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="section-padding px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            eyebrow="Reviews"
+            heading="What Families Are Saying"
+            subheading="Words from clients and caregivers across Madison, Huntsville, Athens, and North Alabama."
+          />
+          <div className="mt-12 grid md:grid-cols-2 gap-10">
+            {testimonials.map((review) => (
+              <blockquote
+                key={review.name}
+                className="border-l-2 border-gold-500 pl-6"
+              >
+                <p className="font-display text-xl sm:text-2xl text-navy-700 leading-snug italic mb-6">
+                  &ldquo;{review.quote}&rdquo;
+                </p>
+                <footer>
+                  <cite className="not-italic font-body text-sm font-medium text-navy-700">
+                    {review.name}
+                  </cite>
+                  <p className="font-body text-xs tracking-wide text-slate-mid mt-1">
+                    {review.role}
+                  </p>
+                </footer>
+              </blockquote>
             ))}
           </div>
         </div>

@@ -250,3 +250,31 @@ export const faqs = [
       'Absolutely. Customized concierge nursing contracts are available.',
   },
 ] as const;
+
+/** Placeholder reviews — replace with real client testimonials when available */
+export const testimonials = [
+  {
+    quote:
+      'Having Prestwell Continuum in our corner changed everything. LaToya explains my mother\'s care plan in plain language, coordinates with her doctors, and keeps our whole family informed. We finally have peace of mind.',
+    name: 'Michelle R.',
+    role: 'Daughter & Caregiver, Huntsville',
+  },
+  {
+    quote:
+      'After my hospital stay, I was overwhelmed by new medications and follow-up appointments. The hospital-to-home support helped me recover safely at home. I feel stronger and more confident every week.',
+    name: 'James T.',
+    role: 'Client, Madison',
+  },
+  {
+    quote:
+      'I live out of state and worried constantly about my father. Prestwell Continuum gave us a trusted advocate who visits him, watches for changes, and updates me after every visit. It has been a true blessing.',
+    name: 'Angela M.',
+    role: 'Long-Distance Family Member, Athens',
+  },
+  {
+    quote:
+      'The Signature membership is exactly what we needed—consistent nursing visits, medication oversight, and someone who actually listens. This is healthcare the way it should feel: personal and compassionate.',
+    name: 'Patricia & Robert K.',
+    role: 'Clients, North Alabama',
+  },
+] as const;
