@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Facebook, Instagram } from 'lucide-react';
 import BrandLockup from '@/components/brand/BrandLockup';
 import { NAV_LINKS, SITE } from '@/lib/site';
 
@@ -59,6 +59,26 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden xl:flex items-center gap-3">
+            <div className="flex items-center gap-1 mr-1" aria-label="Social media">
+              <a
+                href={SITE.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-slate-mid hover:text-navy-700 hover:bg-cream-200 transition-colors"
+                aria-label="Prestwell Continuum on Facebook"
+              >
+                <Facebook size={16} strokeWidth={1.8} />
+              </a>
+              <a
+                href={SITE.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-slate-mid hover:text-navy-700 hover:bg-cream-200 transition-colors"
+                aria-label="Prestwell Continuum on Instagram"
+              >
+                <Instagram size={16} strokeWidth={1.8} />
+              </a>
+            </div>
             <a
               href={SITE.phoneHref}
               className="flex items-center gap-2 text-sm font-body text-slate-mid
@@ -121,6 +141,26 @@ export default function Navbar() {
           })}
 
           <div className="mt-3 pt-4 border-t border-cream-300 flex flex-col gap-3">
+            <div className="flex items-center gap-2 px-4">
+              <a
+                href={SITE.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-slate-mid hover:text-navy-700 hover:bg-cream-200 transition-colors"
+                aria-label="Prestwell Continuum on Facebook"
+              >
+                <Facebook size={18} strokeWidth={1.8} />
+              </a>
+              <a
+                href={SITE.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-slate-mid hover:text-navy-700 hover:bg-cream-200 transition-colors"
+                aria-label="Prestwell Continuum on Instagram"
+              >
+                <Instagram size={18} strokeWidth={1.8} />
+              </a>
+            </div>
             <a
               href={SITE.phoneHref}
               className="flex items-center gap-2 px-4 text-sm font-body text-slate-mid"

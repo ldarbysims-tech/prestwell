@@ -93,18 +93,23 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5">
               <li>
-                <a href={SITE.social.facebook} className="font-body text-sm text-white/65 hover:text-white transition-colors">
+                <a
+                  href={SITE.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm text-white/65 hover:text-white transition-colors"
+                >
                   Facebook
                 </a>
               </li>
               <li>
-                <a href={SITE.social.instagram} className="font-body text-sm text-white/65 hover:text-white transition-colors">
+                <a
+                  href={SITE.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm text-white/65 hover:text-white transition-colors"
+                >
                   Instagram
-                </a>
-              </li>
-              <li>
-                <a href={SITE.social.linkedin} className="font-body text-sm text-white/65 hover:text-white transition-colors">
-                  LinkedIn
                 </a>
               </li>
               <li className="pt-3">

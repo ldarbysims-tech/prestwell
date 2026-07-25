@@ -15,9 +15,8 @@ export const SITE = {
     note: 'Evening and weekend appointments available by request.',
   },
   social: {
-    facebook: '#',
-    instagram: '#',
-    linkedin: '#',
+    facebook: 'https://www.facebook.com/profile.php?id=61587842320325',
+    instagram: 'https://www.instagram.com/prestwellcontinuum',
   },
   url: 'https://www.prestwellcontinuum.com',
 } as const;
