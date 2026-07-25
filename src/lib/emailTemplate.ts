@@ -542,7 +542,7 @@ export function buildConfirmationEmailHtml(data: ContactFormData): string {
                 <table role="presentation" cellpadding="0" cellspacing="0">
                   <tr>
                     <td>
-                      <a href="tel:2566487702" style="
+                      <a href="tel:2562489616" style="
                         display: inline-block;
                         padding: 11px 24px;
                         background-color: ${COLOR.navyMid};
@@ -553,7 +553,7 @@ export function buildConfirmationEmailHtml(data: ContactFormData): string {
                         color: ${COLOR.white};
                         text-decoration: none;
                         letter-spacing: 0.01em;
-                      ">Call 256-648-7702</a>
+                      ">Call 256-248-9616</a>
                     </td>
                   </tr>
                 </table>
@@ -631,7 +631,7 @@ export function buildConfirmationEmailText(data: ContactFormData): string {
     "We've received your message and a member of our care team will be in touch within one business day.",
     '',
     'If you have an urgent concern or prefer to talk now, call us directly:',
-    '  256-648-7702 (business hours, Northern Alabama)',
+    '  256-248-9616 (business hours, Northern Alabama)',
     '',
     'WHAT TO EXPECT',
     '──────────────',

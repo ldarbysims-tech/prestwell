@@ -1,215 +1,155 @@
 import type { Metadata } from 'next';
-import { Heart, Eye, Repeat, Users } from 'lucide-react';
+import PageHero from '@/components/ui/PageHero';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTABanner from '@/components/ui/CTABanner';
+import { coreValues } from '@/content/siteContent';
 
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn the mission and philosophy behind Prestwell Continuum — private-duty nursing grounded in trust, continuity, and genuine human presence.',
+    'Our story, mission, vision, and founder LaToya Darby, MSN, FNP-BC — RN-led concierge care management in North Alabama.',
 };
-
-const values = [
-  {
-    icon: Heart,
-    title: 'Compassion as a Clinical Tool',
-    body: 'We believe a nurse who genuinely cares is a more effective nurse. Emotional attunement isn\'t a soft skill — it\'s essential to healing and to trust.',
-  },
-  {
-    icon: Eye,
-    title: 'Presence, Not Just Procedure',
-    body: 'We do more than complete tasks. We pay attention to the whole person — their mood, their comfort, their dignity — and adjust our care accordingly.',
-  },
-  {
-    icon: Repeat,
-    title: 'Continuity as a Core Value',
-    body: 'The same nurse, reliably. Continuity reduces errors, deepens trust, and allows your nurse to notice changes that only someone who truly knows your loved one can catch.',
-  },
-  {
-    icon: Users,
-    title: 'Families Are Part of the Team',
-    body: 'We don\'t close the door on family involvement. We educate, communicate, and collaborate — because the people who love your patient are part of the care.',
-  },
-];
 
 export default function AboutPage() {
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────── */}
-      <div className="relative pt-32 pb-24 px-6 overflow-hidden bg-navy-700">
-        {/* Background orbs */}
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full
-                          bg-navy-600/50 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full
-                          bg-sage-800/30 blur-3xl" />
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-sage-300
-                         font-medium mb-5">
-            Our Story & Mission
-          </p>
-          <h1
-            className="font-display font-medium text-white leading-tight mb-6"
-            style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)' }}
-          >
-            Care That Begins
-            <span className="italic text-sage-300"> With Presence.</span>
-          </h1>
-          <p className="font-body text-lg text-white/65 leading-relaxed max-w-2xl mx-auto">
-            Prestwell Continuum was founded on a simple belief: that people in their most 
-            vulnerable moments deserve skilled clinical care and genuine human warmth — 
-            not one or the other.
-          </p>
-        </div>
-      </div>
-
-      {/* ── Mission statement ────────────────────────── */}
-      <section className="section-padding px-6 bg-cream-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="font-body text-xs tracking-widest uppercase text-sage-600
-                             font-medium mb-4">
-                Our Mission
-              </p>
-              <h2 className="font-display text-3xl sm:text-4xl font-medium
-                              text-navy-700 leading-snug mb-5">
-                To bring expert nursing home — in every sense of the word.
-              </h2>
-              <div className="space-y-4 font-body text-base text-slate-mid leading-relaxed">
-                <p>
-                  Home should be where healing happens, where comfort lives, and where 
-                  a person retains their sense of self. We bring clinical expertise 
-                  directly to that space — so your loved one never has to sacrifice 
-                  comfort for quality care.
-                </p>
-                <p>
-                  We operate as a private-pay service deliberately. It frees us from 
-                  the limitations that insurance imposes — on time, on scope, on the 
-                  clinical decisions that matter most. We answer to your family, not 
-                  a benefits manager.
-                </p>
-              </div>
-            </div>
-
-            {/* Visual pull quote */}
-            <div className="relative">
-              <div aria-hidden="true"
-                   className="absolute inset-0 bg-sage-50 rounded-3xl rotate-2" />
-              <div className="relative z-10 p-8 rounded-3xl bg-white shadow-warm
-                               border border-cream-200">
-                <div className="w-10 h-0.5 bg-sage-400 mb-6" />
-                <blockquote className="font-serif text-xl italic text-navy-700
-                                       leading-relaxed mb-6">
-                  "The measure of care is not how many tasks were completed — it's 
-                  whether the patient felt seen, safe, and cared for."
-                </blockquote>
-                <footer className="font-body text-sm text-slate-mid">
-                  — The Prestwell Continuum Philosophy
-                </footer>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── The heaviness paragraph ───────────────────── */}
-      <section className="section-padding px-6 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <div aria-hidden="true"
-               className="w-10 h-0.5 bg-sage-400 mx-auto mb-8 rounded-full" />
-          <h2 className="font-display text-3xl sm:text-4xl font-medium text-navy-700
-                          leading-tight mb-6">
-            We Know This Is Hard.
-          </h2>
-          <div className="font-serif text-lg text-slate-mid leading-[1.85] space-y-5">
-            <p>
-              Watching someone you love need more care than you can give is one of 
-              the most humbling experiences a family can face. There is grief in it, 
-              even when the person is still there. There is exhaustion that doesn't 
-              go away with sleep. There is the persistent fear of missing something 
-              important.
-            </p>
-            <p>
-              We built Prestwell Continuum for families in that place — families who 
-              need more than a checklist. They need a nurse who pays attention, who 
-              communicates clearly, who shows up consistently, and who treats their 
-              loved one with the dignity they deserve.
-            </p>
-            <p className="text-navy-700 font-medium not-italic">
-              That is what we do. That is all we do.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Core values ──────────────────────────────── */}
-      <section className="section-padding px-6 bg-cream-50">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeader
-            eyebrow="What Guides Us"
-            heading="Our Core Values"
-            subheading="These aren't statements on a wall. They're the principles every nurse we employ lives by."
-            className="mb-14"
-          />
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            {values.map(({ icon: Icon, title, body }) => (
-              <div
-                key={title}
-                className="p-7 rounded-2xl bg-white border border-cream-200
-                            shadow-soft hover:shadow-warm transition-all hover:-translate-y-0.5"
-              >
-                <div className="w-12 h-12 rounded-xl bg-sage-100 flex items-center
-                                 justify-center mb-5">
-                  <Icon size={22} className="text-sage-600" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-body text-base font-semibold text-navy-700 mb-2">
-                  {title}
-                </h3>
-                <p className="font-body text-sm text-slate-mid leading-relaxed">
-                  {body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Trust credentials ────────────────────────── */}
-      <section className="py-14 px-6 bg-navy-700">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="font-body text-xs tracking-widest uppercase text-sage-300
-                         font-medium mb-8">
-            Our Standard
-          </p>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {[
-              { stat: 'RNs Only',   label: 'Every nurse is a licensed Registered Nurse — never an aide or LPN for clinical tasks' },
-              { stat: 'Vetted',     label: 'Background checked, reference verified, and personally interviewed by our clinical team' },
-              { stat: 'Consistent', label: 'You have the same nurse at every visit — no rotating strangers in your home' },
-            ].map(({ stat, label }) => (
-              <div key={stat}
-                   className="p-6 rounded-2xl bg-white/8 border border-white/10 text-center">
-                <p className="font-display text-3xl font-medium text-white mb-3">{stat}</p>
-                <p className="font-body text-sm text-white/55 leading-relaxed">{label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTABanner
-        heading="Let's Talk About What Your Family Needs."
-        subheading="We'd be honored to be part of your loved one's care. Reach out — no pressure, just conversation."
-        primaryLabel="Schedule a Consultation"
-        primaryHref="/contact"
-        secondaryLabel="See Our Services"
-        secondaryHref="/services"
-        variant="cream"
+      <PageHero
+        eyebrow="About Us"
+        title="Our Story"
+        description="Prestwell Continuum was founded on the belief that exceptional healthcare extends far beyond clinic walls."
       />
+
+      <section className="section-padding px-6 bg-cream-100">
+        <div className="max-w-4xl mx-auto space-y-6 font-body text-lg text-slate-mid leading-relaxed">
+          <p>
+            Our concierge nursing and care management services provide individualized support that
+            empowers older adults to age with dignity while giving families confidence that their
+            loved ones have a trusted healthcare advocate.
+          </p>
+          <p>
+            We collaborate with physicians, specialists, families, and community partners to ensure
+            continuity of care and personalized attention every step of the way.
+          </p>
+        </div>
+      </section>
+
+      <section className="section-padding px-6 bg-white">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+          <div>
+            <SectionHeader eyebrow="Our Mission" heading="What drives us" align="left" />
+            <p className="mt-4 font-body text-slate-mid leading-relaxed text-lg">
+              To deliver compassionate, personalized concierge nursing and care management that
+              promotes independence, enhances wellness, and supports families through every stage
+              of aging.
+            </p>
+          </div>
+          <div>
+            <SectionHeader eyebrow="Our Vision" heading="Where we are headed" align="left" />
+            <p className="mt-4 font-body text-slate-mid leading-relaxed text-lg">
+              To become North Alabama&apos;s premier concierge nursing and care management practice,
+              recognized for clinical excellence, compassionate relationships, and innovative
+              healthcare solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding px-6 bg-cream-100">
+        <div className="max-w-5xl mx-auto">
+          <SectionHeader eyebrow="Our Core Values" heading="How we care" />
+          <ul className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {coreValues.map((value) => (
+              <li
+                key={value}
+                className="font-display text-xl text-navy-700 border-l-2 border-gold-500 pl-5 py-2"
+              >
+                {value}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Meet the Founder */}
+      <section className="section-padding px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-gold-600 font-medium mb-3">
+            Meet the Founder
+          </p>
+          <h2 className="font-display text-3xl sm:text-4xl text-navy-700 mb-2">
+            LaToya Darby, MSN, FNP-BC
+          </h2>
+          <p className="font-body text-gold-600 mb-6">Founder & Concierge Care Manager</p>
+          <div className="gold-rule mb-8" aria-hidden="true" />
+
+          <div className="space-y-5 font-body text-slate-mid leading-relaxed">
+            <p>
+              At Prestwell Continuum, we believe exceptional care begins with meaningful
+              relationships.
+            </p>
+            <p>
+              I&apos;m LaToya Darby, MSN, FNP-BC, Founder of Prestwell Continuum. With more than
+              10 years of nursing experience across Medical-Surgical, Intensive Care (ICU),
+              Progressive Care (PCU), Endoscopy, Geriatrics, and Hospice, I have had the
+              privilege of caring for individuals and families during some of life&apos;s most
+              important moments.
+            </p>
+            <p>
+              Throughout my career, I noticed a common challenge. Many older adults leave
+              medical appointments or the hospital with complex care plans, medication changes,
+              and unanswered questions. Families often want to help but may live out of town,
+              work full-time, or simply feel overwhelmed by navigating today&apos;s healthcare
+              system.
+            </p>
+            <p>
+              I founded Prestwell Continuum because I believe healthcare should be personal,
+              proactive, and centered around the individual—not just the diagnosis. Every older
+              adult deserves an advocate who takes the time to listen, educate, coordinate care,
+              and provide compassionate support beyond the walls of a clinic or hospital.
+            </p>
+            <p>
+              Prestwell Continuum was created to bridge the gap between healthcare providers and
+              everyday living by offering concierge care management that empowers seniors to age
+              safely, independently, and with dignity in the comfort of their own homes. My goal
+              is to provide families with confidence and peace of mind, knowing their loved one
+              has a trusted healthcare professional dedicated to their well-being.
+            </p>
+            <p>
+              As a Family Nurse Practitioner, my vision is to continue expanding Prestwell
+              Continuum into North Alabama&apos;s premier concierge healthcare practice—offering
+              comprehensive mobile healthcare services while maintaining the personalized
+              attention, clinical excellence, and compassionate relationships that define our
+              mission.
+            </p>
+            <p>
+              When you choose Prestwell Continuum, you are choosing more than a service—you are
+              choosing a dedicated healthcare partner committed to helping you or your loved one
+              live well, age with dignity, and navigate healthcare with confidence.
+            </p>
+          </div>
+
+          <div className="mt-10 grid sm:grid-cols-2 gap-8 pt-8 border-t border-cream-300">
+            <div>
+              <h3 className="font-display text-xl text-navy-700 mb-3">Our Mission</h3>
+              <p className="font-body text-sm text-slate-mid leading-relaxed">
+                To provide exceptional concierge nursing and care management that empowers older
+                adults to age safely and independently while delivering peace of mind to the
+                families who love them.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-xl text-navy-700 mb-3">Our Vision</h3>
+              <p className="font-body text-sm text-slate-mid leading-relaxed">
+                To become North Alabama&apos;s premier concierge healthcare practice, recognized
+                for clinical excellence, compassionate relationships, and innovative care that
+                transforms the aging experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTABanner />
     </>
   );
 }

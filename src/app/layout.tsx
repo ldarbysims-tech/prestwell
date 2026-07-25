@@ -1,57 +1,51 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, DM_Sans, Lora } from 'next/font/google';
+import { Playfair_Display, Lato } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { SITE } from '@/lib/site';
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
-  variable: '--font-cormorant',
+  variable: '--font-playfair',
   display: 'swap',
 });
 
-const dmSans = DM_Sans({
+const lato = Lato({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-});
-
-const lora = Lora({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  style: ['normal', 'italic'],
-  variable: '--font-lora',
+  weight: ['300', '400', '700'],
+  variable: '--font-lato',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Prestwell Continuum | Private-Duty Nursing Care',
-    template: '%s | Prestwell Continuum',
+    default: `${SITE.name} | ${SITE.tagline}`,
+    template: `%s | ${SITE.name}`,
   },
   description:
-    'Prestwell Continuum provides compassionate private-duty nursing in your home — clinical expertise with a human touch. Serving families who need more than insurance allows.',
+    'Personalized RN-led concierge nursing and care management helping older adults remain healthy, independent, and confident at home. Serving Madison, Huntsville, Athens, and North Alabama.',
   keywords: [
-    'private duty nursing',
-    'home nursing care',
     'concierge nursing',
-    'private pay nursing',
-    'skilled nursing at home',
-    'care coordination',
-    'Alabama home care',
+    'care management',
+    'RN-led care',
+    'aging in place',
+    'hospital to home',
+    'North Alabama',
+    'Madison AL',
+    'Huntsville',
+    'Athens AL',
   ],
-  metadataBase: new URL('https://www.prestwellcontinuum.com'),
+  metadataBase: new URL(SITE.url),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.prestwellcontinuum.com',
-    siteName: 'Prestwell Continuum',
-    title: 'Prestwell Continuum | Private-Duty Nursing Care',
-    description:
-      'Clinical expertise. Personal presence. Care designed entirely around you.',
+    url: SITE.url,
+    siteName: SITE.name,
+    title: `${SITE.name} | ${SITE.tagline}`,
+    description: SITE.motto,
   },
 };
 
@@ -61,13 +55,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${lora.variable}`}>
-      <body className="bg-cream-50 text-slate-deep antialiased">
-        {/* Skip to main content — accessibility */}
+    <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
+      <body className="bg-cream-100 text-navy-700 antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 
-                     bg-sage-600 text-white px-4 py-2 rounded-lg z-50 text-sm font-body"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4
+                     bg-navy-700 text-white px-4 py-2 rounded-lg z-50 text-sm font-body"
         >
           Skip to main content
         </a>

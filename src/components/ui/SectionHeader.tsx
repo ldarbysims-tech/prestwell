@@ -1,17 +1,13 @@
 interface SectionHeaderProps {
-  eyebrow?: string;       // small uppercase label above heading
+  eyebrow?: string;
   heading: string;
   subheading?: string;
   align?: 'left' | 'center';
-  light?: boolean;        // true = white text (for dark backgrounds)
+  light?: boolean;
   className?: string;
+  showRule?: boolean;
 }
 
-/**
- * SectionHeader
- * Consistent typographic treatment for all page sections.
- * Uses Cormorant Garamond for the main heading and DM Sans for supporting text.
- */
 export default function SectionHeader({
   eyebrow,
   heading,
@@ -19,11 +15,12 @@ export default function SectionHeader({
   align = 'center',
   light = false,
   className = '',
+  showRule = true,
 }: SectionHeaderProps) {
   const alignClass   = align === 'center' ? 'text-center mx-auto' : 'text-left';
-  const eyebrowColor = light ? 'text-sage-300' : 'text-sage-600';
+  const eyebrowColor = light ? 'text-gold-300' : 'text-gold-600';
   const headingColor = light ? 'text-white'    : 'text-navy-700';
-  const subColor     = light ? 'text-white/65' : 'text-slate-mid';
+  const subColor     = light ? 'text-white/70' : 'text-slate-mid';
 
   return (
     <div className={`max-w-2xl ${alignClass} ${className}`}>
@@ -47,6 +44,13 @@ export default function SectionHeader({
       >
         {heading}
       </h2>
+
+      {showRule && (
+        <div
+          className={`gold-rule mb-5 ${align === 'center' ? 'mx-auto' : ''}`}
+          aria-hidden="true"
+        />
+      )}
 
       {subheading && (
         <p

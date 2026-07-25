@@ -1,4 +1,5 @@
 import Button from './Button';
+import { SITE } from '@/lib/site';
 
 interface CTABannerProps {
   heading?: string;
@@ -7,34 +8,26 @@ interface CTABannerProps {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
-  variant?: 'sage' | 'navy' | 'cream';
+  variant?: 'navy' | 'gold' | 'cream';
 }
 
-/**
- * CTABanner
- * A warm, trust-building call-to-action section.
- * Used at the bottom of service/info pages to convert visitors.
- */
 export default function CTABanner({
-  heading    = 'Ready to Talk About Your Family\'s Care?',
-  subheading = 'We\'re here to listen, understand, and create a care plan that truly fits your life.',
-  primaryLabel   = 'Schedule a Free Consultation',
+  heading    = 'Experience personalized healthcare with a trusted nursing professional.',
+  subheading = 'Schedule your complimentary consultation today.',
+  primaryLabel   = 'Schedule Your Consultation Today',
   primaryHref    = '/contact',
-  secondaryLabel = 'Explore Our Services',
+  secondaryLabel,
   secondaryHref  = '/services',
-  variant = 'sage',
+  variant = 'navy',
 }: CTABannerProps) {
   const bg = {
-    sage:  'bg-sage-600',
     navy:  'bg-navy-700',
-    cream: 'bg-cream-100 border border-cream-300',
+    gold:  'bg-gold-500',
+    cream: 'bg-cream-200 border border-cream-300',
   }[variant];
 
-  const textColor = variant === 'cream' ? 'text-navy-700' : 'text-white';
-  const subColor  = variant === 'cream' ? 'text-slate-mid' : 'text-white/70';
-  const btnSecondary = variant === 'cream'
-    ? 'border-sage-600 text-sage-700 hover:bg-sage-50'
-    : 'border-white/40 text-white hover:bg-white/10';
+  const textColor = variant === 'cream' || variant === 'gold' ? 'text-navy-700' : 'text-white';
+  const subColor  = variant === 'cream' || variant === 'gold' ? 'text-slate-mid' : 'text-white/70';
 
   return (
     <section className={`${bg} py-16 px-6`} aria-labelledby="cta-heading">
@@ -52,12 +45,14 @@ export default function CTABanner({
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             href={primaryHref}
-            variant={variant === 'cream' ? 'primary' : 'ghost'}
+            variant={variant === 'navy' ? 'gold' : 'primary'}
             size="lg"
             className={
-              variant !== 'cream'
-                ? 'bg-white text-sage-700 hover:bg-cream-100 shadow-soft'
-                : ''
+              variant === 'navy'
+                ? ''
+                : variant === 'gold'
+                  ? 'bg-navy-700 text-white hover:bg-navy-800'
+                  : ''
             }
           >
             {primaryLabel}
@@ -68,23 +63,26 @@ export default function CTABanner({
               href={secondaryHref}
               variant="outline"
               size="lg"
-              className={btnSecondary}
+              className={
+                variant === 'navy'
+                  ? 'border-white/40 text-white hover:bg-white/10'
+                  : ''
+              }
             >
               {secondaryLabel}
             </Button>
           )}
         </div>
 
-        {/* Phone fallback for high-intent visitors */}
         <p className={`mt-8 text-sm font-body ${subColor}`}>
           Prefer to call?{' '}
           <a
-            href="tel:2566487702"
+            href={SITE.phoneHref}
             className={`underline underline-offset-2 ${
-              variant === 'cream' ? 'text-sage-600 hover:text-sage-700' : 'text-white hover:text-white/90'
+              variant === 'navy' ? 'text-gold-300 hover:text-gold-200' : 'text-navy-700 hover:text-navy-800'
             }`}
           >
-            256-648-7702
+            {SITE.phone}
           </a>
         </p>
       </div>

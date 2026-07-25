@@ -50,7 +50,7 @@ const sections = [
   {
     title: '7. Your Rights',
     body: [
-      'You have the right to access, correct, or request deletion of your personal information. To exercise these rights, please contact us at care@prestwellcontinuum.com or call 256-648-7702.',
+      'You have the right to access, correct, or request deletion of your personal information. To exercise these rights, please contact us at info@prestwellcontinuum.com or call 256-248-9616.',
       'If you are a patient or prospective patient, additional rights regarding your health information are described in our HIPAA Notice of Privacy Practices.',
     ],
   },
@@ -70,7 +70,7 @@ const sections = [
     title: '10. Contact Us',
     body: [
       'If you have questions or concerns about this Privacy Policy, please contact us:',
-      'Prestwell Continuum\nPhone: 256-648-7702\nEmail: care@prestwellcontinuum.com\nServing Northern Alabama',
+      'Prestwell Continuum\nPhone: 256-248-9616\nEmail: info@prestwellcontinuum.com\nServing Northern Alabama',
     ],
   },
 ];

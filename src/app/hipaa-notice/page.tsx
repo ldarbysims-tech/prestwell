@@ -98,7 +98,7 @@ const sections = [
     title: 'How to Exercise Your Rights',
     body: [
       'To exercise any of the rights described in this Notice, please submit a written request to:',
-      'Prestwell Continuum — Privacy Officer\nPhone: 256-648-7702\nEmail: care@prestwellcontinuum.com',
+      'Prestwell Continuum — Privacy Officer\nPhone: 256-248-9616\nEmail: info@prestwellcontinuum.com',
       'We will respond to your request within the timeframes required by applicable law.',
     ],
   },
@@ -106,7 +106,7 @@ const sections = [
     title: 'How to File a Complaint',
     body: [
       'If you believe your privacy rights have been violated, you have the right to file a complaint with Prestwell Continuum or with the U.S. Department of Health and Human Services (HHS) Office for Civil Rights.',
-      'To file a complaint with us, contact our Privacy Officer at care@prestwellcontinuum.com or 256-648-7702.',
+      'To file a complaint with us, contact our Privacy Officer at info@prestwellcontinuum.com or 256-248-9616.',
       'To file a complaint with HHS, visit www.hhs.gov/ocr/privacy/hipaa/complaints or call 1-800-368-1019.',
       'We will not retaliate against you for filing a complaint.',
     ],
@@ -115,7 +115,7 @@ const sections = [
     title: 'Effective Date and Contact Information',
     body: [
       'This Notice is effective January 1, 2025. We reserve the right to change the terms of this Notice and to make the revised Notice effective for all PHI we maintain.',
-      'Questions about this Notice may be directed to our Privacy Officer:\nPrestwell Continuum\nPhone: 256-648-7702\nEmail: care@prestwellcontinuum.com\nServing Northern Alabama',
+      'Questions about this Notice may be directed to our Privacy Officer:\nPrestwell Continuum\nPhone: 256-248-9616\nEmail: info@prestwellcontinuum.com\nServing Northern Alabama',
     ],
   },
 ];

@@ -165,8 +165,8 @@ export default function Hero() {
               <div className="px-6 py-4 bg-cream-100 border-t border-cream-200">
                 <p className="font-body text-xs text-slate-mid text-center">
                   Call us today:{' '}
-                  <a href="tel:2566487702" className="text-sage-600 font-medium hover:underline">
-                    256-648-7702
+                  <a href="tel:2562489616" className="text-sage-600 font-medium hover:underline">
+                    256-248-9616
                   </a>
                 </p>
               </div>

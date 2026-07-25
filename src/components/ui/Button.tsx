@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'gold';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface ButtonProps {
@@ -18,13 +18,15 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-sage-600 hover:bg-sage-700 text-white shadow-soft hover:shadow-warm hover:-translate-y-0.5',
+    'bg-navy-700 hover:bg-navy-800 text-white shadow-soft hover:shadow-warm hover:-translate-y-0.5',
   secondary:
-    'bg-navy-600 hover:bg-navy-700 text-white shadow-soft hover:shadow-warm hover:-translate-y-0.5',
+    'bg-gold-500 hover:bg-gold-600 text-navy-900 shadow-soft hover:shadow-warm hover:-translate-y-0.5',
+  gold:
+    'bg-gold-500 hover:bg-gold-600 text-navy-900 shadow-soft hover:shadow-warm hover:-translate-y-0.5',
   outline:
-    'border border-sage-600 text-sage-700 hover:bg-sage-50 hover:border-sage-700',
+    'border border-navy-700 text-navy-700 hover:bg-navy-50 hover:border-navy-800',
   ghost:
-    'text-sage-700 hover:bg-sage-50',
+    'text-navy-700 hover:bg-cream-200',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

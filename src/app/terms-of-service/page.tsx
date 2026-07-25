@@ -16,7 +16,7 @@ const sections = [
   {
     title: '2. Services Description',
     body: [
-      'Prestwell Continuum provides private-duty nursing services delivered in the client\'s home or place of residence. All clinical services are performed by licensed Registered Nurses operating under applicable Alabama state law and nursing practice standards.',
+      'Prestwell Continuum provides concierge nursing and care management services delivered in the client\'s home, place of residence, or partner community. Clinical services are performed by licensed nursing professionals operating under applicable Alabama state law and nursing practice standards.',
       'The information on this Site is provided for general informational purposes only and does not constitute medical advice. Nothing on this Site creates a nurse-patient or provider-patient relationship unless a formal service agreement has been executed.',
     ],
   },
@@ -24,7 +24,7 @@ const sections = [
     title: '3. No Emergency Services',
     body: [
       'Prestwell Continuum does not provide emergency medical services. If you or someone in your care is experiencing a medical emergency, call 911 or go to the nearest emergency room immediately.',
-      'Our services are designed for ongoing, scheduled private-duty nursing care and are not a substitute for emergency or acute hospital-level care.',
+      'Our services are designed for ongoing, scheduled concierge nursing and care management and are not a substitute for emergency or acute hospital-level care.',
     ],
   },
   {
@@ -85,7 +85,7 @@ const sections = [
     title: '12. Contact Us',
     body: [
       'Questions about these Terms may be directed to:',
-      'Prestwell Continuum\nPhone: 256-648-7702\nEmail: care@prestwellcontinuum.com\nServing Northern Alabama',
+      'Prestwell Continuum\nPhone: 256-248-9616\nEmail: info@prestwellcontinuum.com\nServing Northern Alabama',
     ],
   },
 ];
