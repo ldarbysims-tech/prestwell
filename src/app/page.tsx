@@ -29,14 +29,20 @@ export default function HomePage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-home.jpg"
-            alt="Older adult enjoying independence at home with compassionate support"
+            src="/images/landing-hero.png"
+            alt="Nurse providing compassionate care to an older adult at home"
             fill
             priority
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 hero-overlay" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(105deg, rgba(11, 31, 58, 0.82) 0%, rgba(11, 31, 58, 0.55) 42%, rgba(11, 31, 58, 0.28) 100%)',
+            }}
+          />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20 w-full">

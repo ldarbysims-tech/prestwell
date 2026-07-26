@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-2">
-            <BrandLockup light />
+            <BrandLockup />
             <p className="font-body text-sm text-white/65 leading-relaxed max-w-sm mt-5">
               {SITE.tagline}
             </p>

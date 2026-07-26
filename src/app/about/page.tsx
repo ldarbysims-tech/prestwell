@@ -7,7 +7,7 @@ import { coreValues } from '@/content/siteContent';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Our story, mission, vision, and founder LaToya Darby, MSN, FNP-BC — RN-led concierge care management in North Alabama.',
+    'Our story, mission, vision, and founder LaToya, MSN, FNP-BC — RN-led concierge care management in North Alabama.',
 };
 
 export default function AboutPage() {
@@ -77,7 +77,7 @@ export default function AboutPage() {
             Meet the Founder
           </p>
           <h2 className="font-display text-3xl sm:text-4xl text-navy-700 mb-2">
-            LaToya Darby, MSN, FNP-BC
+            LaToya, MSN, FNP-BC
           </h2>
           <p className="font-body text-gold-600 mb-6">Founder & Concierge Care Manager</p>
           <div className="gold-rule mb-8" aria-hidden="true" />
@@ -88,7 +88,7 @@ export default function AboutPage() {
               relationships.
             </p>
             <p>
-              I&apos;m LaToya Darby, MSN, FNP-BC, Founder of Prestwell Continuum. With more than
+              I&apos;m LaToya, MSN, FNP-BC, Founder of Prestwell Continuum. With more than
               10 years of nursing experience across Medical-Surgical, Intensive Care (ICU),
               Progressive Care (PCU), Endoscopy, Geriatrics, and Hospice, I have had the
               privilege of caring for individuals and families during some of life&apos;s most
