@@ -20,7 +20,7 @@ export default function BrandLockup({
         alt="Prestwell Continuum"
         width={size}
         height={size}
-        className="rounded-full object-cover shadow-soft group-hover:opacity-95 transition-opacity"
+        className="object-contain group-hover:opacity-95 transition-opacity"
         priority
       />
     </span>
