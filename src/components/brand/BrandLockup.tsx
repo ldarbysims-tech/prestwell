@@ -11,7 +11,7 @@ export default function BrandLockup({
   href = '/',
   compact = false,
 }: BrandLockupProps) {
-  const size = compact ? 56 : 72;
+  const size = compact ? 52 : 68;
 
   const inner = (
     <span className="inline-flex items-center group">
@@ -20,7 +20,7 @@ export default function BrandLockup({
         alt="Prestwell Continuum"
         width={size}
         height={size}
-        className="object-contain group-hover:opacity-95 transition-opacity"
+        className="rounded-full object-contain group-hover:opacity-95 transition-opacity"
         priority
       />
     </span>
@@ -28,7 +28,7 @@ export default function BrandLockup({
 
   if (!href) return inner;
   return (
-    <Link href={href} className="inline-flex" aria-label="Prestwell Continuum home">
+    <Link href={href} className="inline-flex shrink-0" aria-label="Prestwell Continuum home">
       {inner}
     </Link>
   );
